@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://tiimg.tistatic.com/employees_photo/5/35230.png" alt="Tushar Saxena" width="150" height="150">
+  <img src="https://cdn6.aptoide.com/imgs/3/2/5/3259518530229cb1241db71b098de3b3_icon.png" alt="tradeindia.com" width="150" height="150">
 </div>
 
 ## :whale: Docker and Kubernetes Workshop - Speaker: Tushar Saxena
