@@ -65,7 +65,9 @@ Kubernetes architecture follows a master-worker node model. It consists of sever
 
 3. **Kube Proxy**: Manages network routing on each node. It maintains network rules and ensures communication between different pods and services within the cluster.
 
-**Architecture of K8s**
+### Architecture of K8s
+
+
 ![K8s Diagram](https://phoenixnap.com/kb/wp-content/uploads/2021/04/full-kubernetes-model-architecture.png)
 
 ### Add-ons
