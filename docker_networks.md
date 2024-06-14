@@ -53,6 +53,95 @@ Containerization means that everything to do with your application stays inside 
 <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--VWYIASru--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/xamayxk1emsh7mwhfj3l.jpg" alt="It works on my system" style="width:50%">
 <br/>
 <br/>
+
+# Docker Volumes
+
+![Docker Volume Image](https://miro.medium.com/v2/resize:fit:786/format:webp/1*xONk464vW-xNYxzE_HsSkw.png)
+
+
+## Introduction
+
+Docker volumes are a crucial feature for persisting data generated and used by Docker containers. They enable data sharing between containers and the host machine, ensuring data persistence even if containers are stopped or removed.
+
+## Overview
+
+Docker volumes are managed storage entities that exist outside the container's life-cycle. They are essential for storing database files, configuration data, and any other data that needs to persist beyond the life of a single container instance.
+
+### Benefits of Using Volumes
+
+- **Persistence**: Data stored in volumes persists even if containers are stopped or removed.
+- **Flexibility**: Volumes can be shared between containers and accessed by multiple containers simultaneously.
+- **Performance**: Better performance compared to using bind mounts, especially for write-heavy workloads.
+
+## Types of Volumes
+
+![hello](https://docs.docker.com/storage/images/types-of-mounts-volume.webp)
+
+
+### Named Volumes
+
+Named volumes are managed by Docker and stored within a specific directory on the host file system.
+
+#### Example: Creating and Using Named Volumes
+
+1. **Create a named volume**:
+
+```shell
+docker volume create mydata_volume
+```
+
+2. Run a container using the named volume:
+
+```shell
+docker run -d --name myapp --mount source=mydata_volume,target=/data nginx:latest
+```
+
+In this example, the nginx container mounts the _mydata_volume_ volume to /data within the container. Any data written to /data inside the container is persisted in the _mydata_volume_ volume on the host.
+
+
+### Bind Mounts
+
+Bind mounts link a container's path directly to a path on the host file-system, allowing direct access to host files.
+
+##### Example: Using Bind Mounts
+
+1. Run a container using a bind mount:
+
+```shell
+docker run -d --name myapp -v /path/on/host:/path/in/container nginx:latest
+```
+
+Replace __/path/on/host__ with the path to a directory on your host machine that you want to mount into the container at __/path/in/container__. Changes made to files in this directory are immediately reflected in both the container and the host file-system.
+
+## Managing Volumes
+
+Docker provides commands to manage volumes through the Docker CLI.
+
+#### Listing Volumes
+To list all Docker volumes on your system:
+
+```shell
+docker volume ls
+```
+
+#### Inspecting Volumes
+To inspect details of a specific volume:
+
+```shell
+docker volume inspect mydata_volume
+```
+
+#### Removing Volumes
+To remove a volume:
+
+```shell
+docker volume rm mydata_volume
+```
+
+
+Note: Ensure no containers are currently using the volume before removing it.
+
+
 # Docker Networks
 Docker networks are a fundamental feature of Docker that enables communication between containers and the host system. When you run multiple containers within Docker, they are isolated by default. Docker networks provide a way to connect these containers, facilitating seamless communication and enabling them to work together as part of a larger application or system.
 
