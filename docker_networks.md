@@ -1,11 +1,11 @@
 # Docker Networks
-Docker networks are a fundamental feature of Docker that enable communication between containers and between containers and the host system. When you run multiple containers within Docker, they are isolated by default. Docker networks provide a way to connect these containers, facilitating seamless communication and enabling them to work together as part of a larger application or system.
+Docker networks are a fundamental feature of Docker that enables communication between containers and the host system. When you run multiple containers within Docker, they are isolated by default. Docker networks provide a way to connect these containers, facilitating seamless communication and enabling them to work together as part of a larger application or system.
 
 ## Docker offers different types of network drivers, each with its specific use case:
 
 1. **Bridge Network:** This is the default network created when you run a Docker container without specifying a network. Containers connected to the bridge network can communicate with each other using their IP addresses. You can also expose container ports to the host using this network type.
 
-2. **Host Network:** When you use the host network driver, the container shares the host's network namespace, which means it uses the host's network stack directly. This provides the best performance for the container, but it also means the container's ports are directly exposed on the host.
+2. **Host Network:** When you use the host network driver, the container shares the host's network namespace, which means it uses the host's network stack directly. This provides the best performance for the container but also means the container's ports are directly exposed to the host.
 
 3. **Overlay Network:** Overlay networks are used in Docker Swarm mode to allow communication between containers running on different Docker hosts within a swarm. It creates a secure, multi-host network for container communication.
 
