@@ -2,7 +2,7 @@
   <img src="https://images.crunchbase.com/image/upload/c_pad,f_auto,q_auto:eco,dpr_1/v1473843963/cdy69xpmmkjntymhbxpa.png" alt="https://tothenew.com" width="150" height="150">
 </div>
 
-## :whale: Docker for Devs - Speaker: Prajwal Dev and Tushar Saxena
+## :whale: Docker for Devs - Speakers: Prajwal Dev and Tushar Saxena
 
 <div align="center">
   <img src="https://i.pinimg.com/originals/f5/5e/80/f55e8059ea945abfd6804b887dd4a0af.gif" alt="Docker">
