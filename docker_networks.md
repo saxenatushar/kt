@@ -51,7 +51,8 @@ Containers, as their name suggests, contain things. In the case of Docker, it co
 Containerization means that everything to do with your application stays inside the container. You shouldn't need to worry about how stuff on your machine (e.g. which version of Python you have) affects how your program runs. As a side benefit, this means that Docker containers are dependency-free. Never worry about "oh, it works on my machine" ever again! After a Docker image is created, all of its contents are frozen so it should work exactly the same on your computer as it does for someone else (assuming you both have Docker).
 
 <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--VWYIASru--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_800/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/xamayxk1emsh7mwhfj3l.jpg" alt="It works on my system" style="width:50%">
-
+<br/>
+<br/>
 # Docker Networks
 Docker networks are a fundamental feature of Docker that enables communication between containers and the host system. When you run multiple containers within Docker, they are isolated by default. Docker networks provide a way to connect these containers, facilitating seamless communication and enabling them to work together as part of a larger application or system.
 
